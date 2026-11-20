@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shazeb &amp; Rehnuma — Wedding Invitation</title>
+<meta name="description" content="You are cordially invited to celebrate the wedding of Shazeb & Rehnuma.">
+<meta name="theme-color" content="#123C32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>#intro{display:none!important}body.is-locked{overflow:auto!important}</style></noscript>
+</head>
+<body class="is-locked">
+
+<!-- Shared SVG symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="star8" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 0l2.6 5.5L20.5 3.5l-2 5.9L24 12l-5.5 2.6 2 5.9-5.9-2L12 24l-2.6-5.5-5.9 2 2-5.9L0 12l5.5-2.6-2-5.9 5.9 2z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<canvas id="dust" aria-hidden="true"></canvas>
+
+<!-- =============== 1 · CINEMATIC INTRO =============== -->
+<div id="intro" class="intro" role="dialog" aria-label="Wedding invitation — tap to open">
+  <div class="intro__bg"></div>
+  <canvas id="introDust" class="intro__dust" aria-hidden="true"></canvas>
+
+  <div class="intro__crescent" id="introCrescent">
+    <div class="glow"></div>
+    <img src="assets/crescent.png" alt="" width="402" height="470">
+  </div>
+
+  <div class="intro__lantern intro__lantern--l"><div class="swing"><img src="assets/lantern-a.png" alt="" width="134" height="461"></div></div>
+  <div class="intro__lantern intro__lantern--r"><div class="swing"><img src="assets/lantern-b.png" alt="" width="97" height="405"></div></div>
+
+  <div class="intro__stage" id="introStage">
+    <div class="env" id="env">
+      <div class="env__glow" id="envGlow"></div>
+      <div class="env__back">
+      </div>
+
+      <div class="env__letter" id="envLetter">
+        <div class="letter__in">
+          <p class="ar" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+          <span class="rule"></span>
+          <p class="letter__t">You are cordially invited</p>
+          <p class="letter__n"><span data-bind="groom">Shazeb</span> &amp; <span data-bind="bride">Rehnuma</span></p>
+        </div>
+      </div>
+
+      <div class="env__front" id="envFront">
+        <svg class="env__frame" viewBox="0 0 134 100" preserveAspectRatio="none" aria-hidden="true">
+          <rect class="draw" x="4" y="4" width="126" height="92" pathLength="1"/>
+          <rect class="draw" x="7" y="7" width="120" height="86" pathLength="1"/>
+        </svg>
+        <svg class="env__lines" viewBox="0 0 134 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 100 L67 49 L134 100"/><path d="M0 0 L67 49 L134 0" class="faint"/>
+        </svg>
+        <img class="env__corner env__corner--l" src="assets/corner-left.png" alt="">
+        <img class="env__corner env__corner--r" src="assets/corner-right.png" alt="">
+        <div class="env__names" id="envNames">
+          <span class="gold-text" data-bind="groom">Shazeb</span>
+          <i>&amp;</i>
+          <span class="gold-text" data-bind="bride">Rehnuma</span>
+        </div>
+      </div>
+
+      <div class="env__flap" id="envFlap">
+        <div class="flap__out"></div>
+        <div class="flap__in"></div>
+      </div>
+      <div class="env__seal" id="envSeal"><span data-bind="groomInitial">S</span><em>&amp;</em><span data-bind="brideInitial">R</span></div>
+    </div>
+
+    <button class="btn btn--ghost intro__btn" id="openBtn" type="button"><span>Tap to open invitation</span></button>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- =============== 2 · HERO =============== -->
+<section class="hero" id="hero" aria-label="Wedding invitation">
+  <div class="hero__bg"></div>
+  <div class="hero__pattern px" data-depth="0.06"></div>
+  <div class="hero__rays" aria-hidden="true"></div>
+  <div class="stars" data-stars="16"></div>
+
+  <div class="hero__mosque hero__mosque--l px" data-depth="-0.04"><img src="assets/mosque.png" alt="" loading="lazy"></div>
+  <div class="hero__mosque hero__mosque--r px" data-depth="-0.04"><img src="assets/mosque.png" alt="" loading="lazy"></div>
+
+  <div class="hero__garland"><img src="assets/garland.png" alt="" width="487" height="255"></div>
+  <div class="hero__lantern hero__lantern--l"><div class="swing"><img src="assets/lantern-a.png" alt="" loading="lazy"></div></div>
+  <div class="hero__lantern hero__lantern--r"><div class="swing"><img src="assets/lantern-b.png" alt="" loading="lazy"></div></div>
+  <img class="hero__corner hero__corner--l px" data-depth="0.05" src="assets/corner-left.png" alt="">
+  <img class="hero__corner hero__corner--r px" data-depth="0.05" src="assets/corner-right.png" alt="">
+
+  <div class="hero__content">
+    <div class="bismillah">
+      <p class="ar" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <p class="tr">Bismillah ir-Rahman ir-Raheem</p>
+    </div>
+
+    <div class="arch" id="arch">
+      <div class="arch__glow"></div>
+      <div class="arch__crescent"><div class="glow"></div><img src="assets/crescent.png" alt=""></div>
+      <img class="arch__img" src="assets/arch.png" alt="" width="466" height="442">
+      <div class="arch__in">
+        <p class="blessing">With the blessings of Allah</p>
+        <h1 class="names">
+          <span class="name gold-text" data-bind="groom">Shazeb</span>
+          <span class="amp" aria-hidden="true">&amp;</span>
+          <span class="name gold-text" data-bind="bride">Rehnuma</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="hero__date" id="heroDate"><span class="line"></span><time data-bind="dateShort">01 · 01 · 2027</time><span class="line"></span></div>
+    <p class="hero__invite">You are cordially invited to celebrate our wedding.</p>
+  </div>
+  <div class="petals" data-petals="9" aria-hidden="true"></div>
+  <div class="edge edge--hole" style="--c:var(--burgundy-deep)"></div>
+</section>
+
+<!-- =============== 3 · COUNTDOWN =============== -->
+<section class="cd" id="countdown" aria-labelledby="cdTitle">
+  <div class="cd__pattern px" data-depth="0.05"></div>
+  <div class="stars" data-stars="14"></div>
+  <div class="cd__crescent"><div class="glow"></div><img src="assets/crescent.png" alt="" loading="lazy"></div>
+  <div class="cd__lantern cd__lantern--l"><div class="swing"><img src="assets/lantern-a.png" alt="" loading="lazy"></div></div>
+  <div class="cd__lantern cd__lantern--r"><div class="swing"><img src="assets/lantern-b.png" alt="" loading="lazy"></div></div>
+
+  <div class="wrap">
+    <p class="eyebrow">Save the date</p>
+    <h2 class="h2 split" id="cdTitle">Counting Down to Our Forever</h2>
+    <div class="cd__panel" id="cdPanel">
+      <img class="cd__corner cd__corner--tl" src="assets/corner-left.png" alt="">
+      <img class="cd__corner cd__corner--tr" src="assets/corner-right.png" alt="">
+      <div class="cd__grid" role="timer" aria-live="off">
+        <div class="cd__card"><div class="cd__num" data-unit="days"></div><div class="cd__lab">Days</div></div>
+        <div class="cd__card"><div class="cd__num" data-unit="hours"></div><div class="cd__lab">Hours</div></div>
+        <div class="cd__card"><div class="cd__num" data-unit="minutes"></div><div class="cd__lab">Minutes</div></div>
+        <div class="cd__card"><div class="cd__num" data-unit="seconds"></div><div class="cd__lab">Seconds</div></div>
+      </div>
+      <p class="cd__date" data-bind="dateLong">Friday, 1 January 2027</p>
+    </div>
+    <p class="cd__done" id="cdDone" hidden>Alhamdulillah — the blessed day has arrived.</p>
+  </div>
+  <div class="edge edge--hole" style="--c:var(--ivory)"></div>
+</section>
+
+<!-- =============== 4 · VENUE =============== -->
+<section class="venue paper" id="venue" aria-labelledby="venueTitle">
+  <img class="sec__corner sec__corner--l px" data-depth="0.04" src="assets/corner-left.png" alt="">
+  <img class="sec__corner sec__corner--r px" data-depth="0.04" src="assets/corner-right.png" alt="">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--dark">The Celebration</p>
+    <div class="vcard" id="vcard">
+      <div class="vcard__crescent"><img src="assets/crescent.png" alt=""></div>
+      <div class="vcard__border"></div>
+      <div class="vcard__body">
+        <div class="archhead"><img src="assets/arch.png" alt=""><h2 class="archhead__t" id="venueTitle"><span data-bind="eventName">Nikah</span></h2></div>
+        <img class="divider" src="assets/divider.png" alt="">
+        <div class="vcard__row"><span class="k">Date</span><span class="v" data-bind="dateLong">Friday, 1 January 2027</span></div>
+        <div class="vcard__row"><span class="k">Time</span><span class="v" data-bind="timeRange">5:00 PM</span></div>
+        <div class="vcard__venue" data-bind="venueName">Venue Name</div>
+        <address class="vcard__addr" data-bind="venueAddress">Address</address>
+        <div class="vcard__btns">
+          <a class="btn btn--solid" id="mapBtn" target="_blank" rel="noopener" href="#"><span>View Location</span></a>
+          <a class="btn btn--outline" id="calBtn" target="_blank" rel="noopener" href="#"><span>Add to Calendar</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== 5 · FAMILIES =============== -->
+<section class="fam paper" id="family" aria-labelledby="famTitle">
+  <div class="wrap">
+    <div class="scroll" id="scrollBanner">
+      <img src="assets/scroll.png" alt="">
+      <h2 class="scroll__t" id="famTitle">Together With<br>Our Families</h2>
+    </div>
+    <p class="fam__msg" id="famMsg">With the blessings of Allah and the prayers of our beloved families, we joyfully invite you to witness and celebrate the beginning of our new journey together — and to grace us with your presence and duas.</p>
+
+    <div class="fam__grid">
+      <article class="fcard" data-side="groom">
+        <div class="fcard__border"></div>
+        <div class="fcard__body">
+          <div class="archhead archhead--sm"><img src="assets/arch.png" alt=""><p class="archhead__t">The Groom’s<br>Family</p></div>
+          <h3 class="fcard__name" data-bind="groomFamily">The Khan Family</h3>
+          <img class="divider divider--sm" src="assets/divider.png" alt="">
+          <p class="fcard__lbl">Son of</p>
+          <p class="fcard__par" data-bind="groomParents">Mr. Abdul Karim Khan<br>&amp; Mrs. Ayesha Khan</p>
+        </div>
+      </article>
+      <article class="fcard" data-side="bride">
+        <div class="fcard__border"></div>
+        <div class="fcard__body">
+          <div class="archhead archhead--sm"><img src="assets/arch.png" alt=""><p class="archhead__t">The Bride’s<br>Family</p></div>
+          <h3 class="fcard__name" data-bind="brideFamily">The Ansari Family</h3>
+          <img class="divider divider--sm" src="assets/divider.png" alt="">
+          <p class="fcard__lbl">Daughter of</p>
+          <p class="fcard__par" data-bind="brideParents">Mr. Mohammad Yusuf Ansari<br>&amp; Mrs. Zainab Ansari</p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="edge edge--dome" style="--c:var(--emerald)"></div>
+</section>
+
+<!-- =============== 6 · FOOTER =============== -->
+<footer class="foot" id="footer">
+  <div class="foot__pattern px" data-depth="0.05"></div>
+  <div class="stars" data-stars="18"></div>
+  <img class="foot__petals" src="assets/petals.png" alt="" loading="lazy">
+  <div class="foot__lantern foot__lantern--l"><div class="swing"><img src="assets/lantern-a.png" alt="" loading="lazy"></div></div>
+  <div class="foot__lantern foot__lantern--r"><div class="swing"><img src="assets/lantern-b.png" alt="" loading="lazy"></div></div>
+  <img class="foot__corner foot__corner--l" src="assets/corner-left.png" alt="">
+  <img class="foot__corner foot__corner--r" src="assets/corner-right.png" alt="">
+
+  <div class="foot__moon px" data-depth="-0.08"><div class="glow"></div><img src="assets/crescent.png" alt="" loading="lazy"></div>
+  <div class="wrap foot__in">
+    <p class="foot__dua">May Allah bless our union with love, peace and barakah.</p>
+    <p class="foot__with">With love and duas</p>
+    <p class="foot__names"><span class="gold-text" data-bind="groom">Shazeb</span> <i>&amp;</i> <span class="gold-text" data-bind="bride">Rehnuma</span></p>
+    <img class="divider divider--gold" src="assets/divider.png" alt="">
+  </div>
+  <div class="petals" data-petals="7" aria-hidden="true"></div>
+</footer>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
